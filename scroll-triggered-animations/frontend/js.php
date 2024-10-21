@@ -24,7 +24,7 @@ var scrollTriggers = ['.move-in-left',
 setTimeout(function(){
     joinsViewport(scrollTriggers.join(','));
 		
-	 joinsViewport('<?php echo $option['toast_sta_advanced_animations']; ?>');
+	joinsViewport('<?php echo esc_js($option['toast_sta_advanced_animations'] ?? ''); ?>');
 
  function joinsViewport(elements){
  

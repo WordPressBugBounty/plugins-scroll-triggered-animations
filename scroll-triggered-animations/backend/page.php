@@ -4,7 +4,7 @@
 		<div class="sta-body">
 			<header class="sta-header">
 				<a href="https://www.toastplugins.co.uk/" target="_blank" class="logo">
-				<img src="<?php echo plugins_url(); ?>/scroll-triggered-animations/assets/logo-white.png">
+				<img src="<?php echo esc_url(plugins_url('/scroll-triggered-animations/assets/logo-white.png')); ?>">
 				</a>
 				<ul class="header-nav">
 					<li class="active" data-name="hub">
