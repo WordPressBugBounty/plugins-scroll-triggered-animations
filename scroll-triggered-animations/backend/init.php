@@ -19,21 +19,32 @@ add_action('admin_enqueue_scripts', 'toast_sta_backend_scripts');
 /*
  * AJAX function which runs when an option is updated
  */
-function sta_update_options(){
-	if(current_user_can('administrator')):
-		$option = sanitize_text_field($_POST['option']);
-		$value = sanitize_text_field($_POST['value']);
-		
-		if($value == 'off' || $value == 'false'){
-			$value = 'off';
-		}elseif($value == 'checked' || $value == 'true'){
-			$value = 'on';
-		}
-		
-		$sta_options = get_option( 'toast_sta_settings' ); 
-		$sta_options[sanitize_text_field($option)] = sanitize_text_field($value);
-		update_option('toast_sta_settings', $sta_options);
-	endif;
-	die();
+function sta_update_options() {
+    if (!current_user_can('manage_options')) {
+        exit;
+    }
+
+    if (!isset($_POST['option'], $_POST['value'])) {
+        exit;
+    }
+
+    $option = sanitize_text_field($_POST['option']);
+    $value = sanitize_text_field($_POST['value']);
+
+    if ($value === 'off' || $value === 'false') {
+        $value = 'off';
+    } elseif ($value === 'checked' || $value === 'true') {
+        $value = 'on';
+    }
+
+    $sta_options = get_option('toast_sta_settings', array());
+    if (!is_array($sta_options)) {
+        $sta_options = array();
+    }
+
+    $sta_options[$option] = $value;
+    update_option('toast_sta_settings', $sta_options);
+
+    exit;
 }
 add_action('wp_ajax_sta_update_options', 'sta_update_options');
