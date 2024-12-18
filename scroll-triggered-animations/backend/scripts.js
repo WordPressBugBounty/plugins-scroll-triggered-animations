@@ -35,7 +35,7 @@ jQuery(window).ready(function(){
       })
 	}
 	
-	jQuery('body').on('change','input:not(#element-activator)', function(){
+	jQuery('body').on('change','input:not(#element-activator), textarea', function(){
 		   updateSTAoptions(jQuery(this))
 	})
 	

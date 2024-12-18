@@ -43,7 +43,7 @@
 						<h4>Animation start position (Bottom)</h4>
 						Select the number of pixels from the bottom of the viewport your animations will start. Useful if you have a fixed footer.
 					</label>
-					<input type="number" name="toast_sta_position_start" id="toast_sta_position_start" value="<?php echo $sta_options['toast_sta_position_start']; ?>" placeholder="0">
+					<input type="number" name="toast_sta_position_start" id="toast_sta_position_start" value="<?php echo esc_html($sta_options['toast_sta_position_start']); ?>" placeholder="0">
 					<div class="unit">px</div>
 				</div>
 				<div class="option premium">
@@ -51,7 +51,7 @@
 						<h4>Animation start position (Top)</h4>
 						Select the number of pixels from the top of the viewport your animations will start. Useful if you have a fixed header. Only applicable if repeat animations* is enabled.
 					</label>
-					<input type="number" name="toast_sta_offset_from_top" id="toast_sta_offset_from_top" value="<?php echo $sta_options['toast_sta_offset_from_top']; ?>" placeholder="0">
+					<input type="number" name="toast_sta_offset_from_top" id="toast_sta_offset_from_top" value="<?php echo esc_html($sta_options['toast_sta_offset_from_top']); ?>" placeholder="0">
 					<div class="unit">px</div>
 				</div>
 			</div>	

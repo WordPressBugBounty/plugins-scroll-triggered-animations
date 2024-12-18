@@ -32,7 +32,7 @@
 		<div class="option-area" style="margin-top:20px;">
 			<h2>Activated Elements</h2>
 			<?php if($sta_options['toast_sta_advanced_animations']): ?>
-			<?php $activated_elements = explode(',', $sta_options['toast_sta_advanced_animations']); ?>
+			<?php $activated_elements = explode(',', esc_html($sta_options['toast_sta_advanced_animations'])); ?>
 			<p>Click an element to deactivate</p>
 			<ul class="activated-elements">
 			
@@ -43,13 +43,13 @@
 			<?php else: ?>
 			<div class="no-activated-elements">No Elements currently activated</div>
 			<?php endif; ?>
-			<input type="hidden" name="toast_sta_advanced_animations" <?php if($sta_options['toast_sta_advanced_animations'] !== 'off'): ?>value="<?php echo $sta_options['toast_sta_advanced_animations']; ?>"<?php endif; ?>>
+			<input type="hidden" name="toast_sta_advanced_animations" <?php if($sta_options['toast_sta_advanced_animations'] !== 'off'): ?>value="<?php echo esc_html($sta_options['toast_sta_advanced_animations']); ?>"<?php endif; ?>>
 		</div>
 		
 		<div class="option-area" style="margin-top:20px">
 			<h2>Apply your CSS</h2>
 			<p>Apply your CSS in the text box below or anywhere within your theme.</p>
-			<textarea name="toast_sta_animations_css"><?php if($sta_options['toast_sta_animations_css']): ?><?php echo $sta_options['toast_sta_animations_css']; ?><?php endif; ?></textarea>
+			<textarea name="toast_sta_animations_css"><?php if($sta_options['toast_sta_animations_css']): ?><?php echo esc_html($sta_options['toast_sta_animations_css']); ?><?php endif; ?></textarea>
 		</div>
 		
 	</div>
