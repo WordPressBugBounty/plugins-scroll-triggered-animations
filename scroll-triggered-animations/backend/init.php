@@ -42,7 +42,7 @@ function sta_update_options() {
         $sta_options = array();
     }
 
-    $sta_options[$option] = $value;
+    $sta_options[$option] = sanitize_text_field($value);
     update_option('toast_sta_settings', $sta_options);
 
     exit;

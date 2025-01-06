@@ -3,7 +3,7 @@ Contributors: aaronj1998, davros20
 Requires at least: 5.1
 Tested up to: 6.4
 Tags: Animation, Animate, CSS
-Stable tag: 3.0.14
+Stable tag: 3.0.15
 
 A highly customisable, yet user friendly interface for applying CSS animations to your website frontend.
 
