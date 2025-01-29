@@ -24,7 +24,7 @@ var scrollTriggers = ['.move-in-left',
 setTimeout(function(){
     joinsViewport(scrollTriggers.join(','));
 		
-	joinsViewport('<?php echo esc_js($option['toast_sta_advanced_animations'] ?? ''); ?>');
+	joinsViewport('<?php echo esc_attr($option['toast_sta_advanced_animations'] ?? ''); ?>');
 
  function joinsViewport(elements){
  
@@ -47,7 +47,7 @@ setTimeout(function(){
 		     BottomOfWindow = topOfWindow + windowHeight
 		 
 		 
-		 if( elementPosition < BottomOfWindow <?php if($option['toast_sta_position_start']): ?>-<?php echo esc_js($option['toast_sta_position_start']); ?><?php endif; ?>){
+		 if( elementPosition < BottomOfWindow <?php if($option['toast_sta_position_start']): ?>-<?php echo esc_attr($option['toast_sta_position_start']); ?><?php endif; ?>){
 			 jQuery(item).addClass('scroll-triggered');
 		 }
 			 
@@ -55,7 +55,7 @@ setTimeout(function(){
 		 
 //ANIMATE ITEMS ON PAGE LOAD
   <?php if(isset($option['toast_animate_on_page_load']) && $option['toast_animate_on_page_load'] == 'on'): ?>
-	 if( elementPosition < BottomOfWindow<?php if($option['toast_sta_position_start']): ?>-<?php echo esc_js($option['toast_sta_position_start']); ?><?php endif; ?>){
+	 if( elementPosition < BottomOfWindow<?php if($option['toast_sta_position_start']): ?>-<?php echo esc_attr($option['toast_sta_position_start']); ?><?php endif; ?>){
 	    jQuery(this).addClass('scroll-triggered');
 	 } 
   <?php endif; ?>
