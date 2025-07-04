@@ -1,9 +1,11 @@
 === Animator - Scroll Triggered Animations ===
 Contributors: aaronj1998, davros20
 Requires at least: 5.1
-Tested up to: 6.7.1
+Tested up to: 6.8.1
 Tags: Animation, Animate, CSS
-Stable tag: 3.0.16
+Stable tag: 3.0.17
+License: GPL-2.0+
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 A highly customisable, yet user friendly interface for applying CSS animations to your website frontend.
 

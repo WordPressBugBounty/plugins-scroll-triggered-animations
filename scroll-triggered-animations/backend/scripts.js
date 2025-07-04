@@ -23,7 +23,8 @@ jQuery(window).ready(function(){
 			 url : './admin-ajax.php',
          	 data : {action: 'sta_update_options', 
 				 	 option : option,
-				 	 value : value
+				 	 value : value,
+					 nonce: sta_ajax_data.nonce
 					},
          	  success: function(sta_update_options) {
 				  jQuery(element).parents('.option-area').addClass('success');
