@@ -3,7 +3,7 @@ Contributors: aaronj1998, davros20
 Requires at least: 5.1
 Tested up to: 6.8.1
 Tags: Animation, Animate, CSS
-Stable tag: 3.0.17
+Stable tag: 3.1.1
 License: GPL-2.0+
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
